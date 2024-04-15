@@ -41,8 +41,21 @@ const getMovies = async () => {
   }
 };
 
-const getMovieInfo = () => {
-
+const getMovieInfo = async (movie) => {
+  const movieId = movie.id;
+  const movieEndpoint = `/movie/${movieId}`;
+  const requestParams = `?api_key=${tmdbKey}`;
+  const urlToFetch = tmdbBaseUrl + movieEndpoint + requestParams;
+  try {
+    const response = await fetch(urlToFetch);
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      const movieInfo = await jsonResponse.results;
+      return movieInfo;
+    }
+  } catch(e) {
+    console.log(e);
+  }
 };
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
