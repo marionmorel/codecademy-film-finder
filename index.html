@@ -1,81 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Marion Morel | Front-End Web Developper</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Quattrocento&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/9e775003d5.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <div id="logo">
-                Marion Morel - Portfolio
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="about">
-                <div id="about-text">
-                    <h1>My name is Marion</h1>
-                    <p>I am a learning how to be a Front End Web Developper.</p>
-                    <p>This is my portfolio.</p>
-                </div>
-            </section>
-            <section id="projects">
-                <h2>My Projects</h2>
-                <div id="project-container">
-                    <div class="project-card">
-                        <img src="./resources/images/number-guesser.png"/>
-                        <div class="project-description">
-                            <p>Number Guesser <a href="https://marionmorel.github.io/codecademy-number-guesser/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></h3>
-                            <p>GitHub Repository <a href="https://github.com/marionmorel/codecademy-number-guesser" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./resources/images/piano-player.png"/>
-                        <div class="project-description">
-                            <p>Piano Keys <a href="https://marionmorel.github.io/codecademy-piano-keys/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></p>
-                            <p>Github Repository <a href="https://github.com/marionmorel/codecademy-piano-keys" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./resources/images/form-a-story.png"/>
-                        <div class="project-description">
-                            <p>Form A Story <a href="https://marionmorel.github.io/codecademy-form-a-story/" target="blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></p>
-                            <p>GitHub Repository <a href="https://github.com/marionmorel/codecademy-form-a-story" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./resources/images/film-finder.png"/>
-                        <div class="project-description">
-                            <p>Film Finder <a href="https://marionmorel.github.io/codecademy-film-finder/" target="blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></p>
-                            <p>GitHub Repository <a href="https://github.com/marionmorel/codecademy-film-finder" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="skills">
-                <h2>My Skills</h2>
-                <div id="icons">
-                    <i class="fa-brands fa-html5 fa-2xl"></i>
-                    <i class="fa-brands fa-css3-alt fa-2xl"></i>
-                    <i class="fa-brands fa-js fa-2xl"></i>
-                    <i class="fa-brands fa-git fa-2xl"></i>
-                    <i class="fa-brands fa-react fa-2xl"></i>
-                </div>
-            </section>
-        </main>
-        <footer>
-            © Marion Morel 2024
-        </footer>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>Film Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&family=Fredoka+One&family=Questrial&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/style.css">
+    <script defer src="https://kit.fontawesome.com/e918d10e90.js" crossorigin="anonymous"></script>
+    <script defer src="public/helpers.js"></script>
+    <script defer src="public/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="appTitle">🍿Film Finder🍿</h1>
+    </header>
+    <form id="genreForm">
+      <label>Choose a genre:</label>
+      <select name="genres" id="genres">
+      </select>
+    </form>
+    <button id="playBtn">Let's Play!</button>
+    <div id="movieInfo">
+      <div id="moviePoster"></div>
+      <div id="movieText"></div>
+    </div>
+    <div id="likeOrDislikeBtns" hidden>
+      <button id="likeBtn"><i class="fa-solid fa-thumbs-up"></i></button>
+      <button id="dislikeBtn"><i class="fa-solid fa-thumbs-down"></i></button>
+    </div>
+  </body>
 </html>
